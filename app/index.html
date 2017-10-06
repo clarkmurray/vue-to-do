@@ -13,8 +13,8 @@
 		<input v-model="newTask" id="taskInput" type="text" placeholder="Enter task here">
 		<button v-on:click="addToList">Add Task</button>
 
-		<ul v-for="task in tasks">
-			<li>{{ task }}</li>
+		<ul v-for="(task, index) in tasks">
+			<li v-on:click="removeItem(index)">{{index + 1}}: {{ task | capitalize }}</li>
 		</ul>
 
 
