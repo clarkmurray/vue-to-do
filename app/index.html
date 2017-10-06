@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue To-Do</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Vue To-Do</h1>
+
+	<div id="taskList" v-cloak>
+
+
+		<input v-model="newTask" id="taskInput" type="text" placeholder="Enter task here">
+		<button v-on:click="addToList">Add Task</button>
+
+		<ul v-for="task in tasks">
+			<li>{{ task }}</li>
+		</ul>
+
+
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="main.js"></script>
+</body>
+</html>
