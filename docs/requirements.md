@@ -6,7 +6,8 @@
 [x] Clear input field after each submission
 [x] Have clickable 'x' that deletes the item on the list
 [ ] Give input field focus after each submission
-[ ] Press Enter to submit
+[x] Press Enter to submit
+[ ] Don't accept blank inputs
 [ ] Add Bootstrap 4 & Style
 [ ] Highlight by level of importance
 [ ] Drag and drop for order
