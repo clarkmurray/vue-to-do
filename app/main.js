@@ -27,7 +27,7 @@ var toDo = new Vue ({
 
 		removeItem: function(index) {
 			console.log("Entered");
-			this.tasks.splice(index, (index + 1));
+			this.tasks.splice(index, 1);
 		}
 	}
 

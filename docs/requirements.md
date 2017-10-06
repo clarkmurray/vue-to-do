@@ -1,7 +1,7 @@
 # Requirements
 
 [x] Have a list of tasks generated from user input
-[ ] Delete unwanted items
+[x] Delete unwanted items
 [x] Capitalize the first letter of the string
 [x] Clear input field after each submission
 [ ] Give input field focus after each submission
