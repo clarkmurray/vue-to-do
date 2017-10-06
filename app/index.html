@@ -14,7 +14,7 @@
 		<button v-on:click="addToList">Add Task</button>
 
 		<ul v-for="(task, index) in tasks">
-			<li v-on:click="removeItem(index)">{{index + 1}}: {{ task | capitalize }}</li>
+			<li><span v-on:click="removeItem(index)" id="deleteIcon">x </span>{{index + 1}}. {{ task | capitalize }}</li>
 		</ul>
 
 

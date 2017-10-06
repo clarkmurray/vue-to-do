@@ -5,8 +5,15 @@ h1 {
 #taskList {
 	text-align: center;
 }
+
+#deleteIcon:hover {
+	cursor: pointer;
+	color: red;
+}
+
 li {
 	margin: 0 auto;
+	text-align: left;
 	list-style-type: none;
 	background-color: blue;
 	color: white;
