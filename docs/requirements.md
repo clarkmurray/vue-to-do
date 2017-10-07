@@ -5,11 +5,18 @@
 [x] Capitalize the first letter of the string
 [x] Clear input field after each submission
 [x] Have clickable 'x' that deletes the item on the list
-[ ] Give input field focus after each submission
 [x] Press Enter to submit
-[ ] Don't accept blank inputs
-[ ] Add Bootstrap 4 & Style
-[ ] Highlight by level of importance
+[x] Don't accept blank inputs
+[ ] Give input field focus after each submission
+[x] Dynamically generate objects
+[ ] Toggle multiple colors (green, yellow, red)
 [ ] Drag and drop for order
+[ ] Mark as complete, in progress, or not started
+[ ] Sub-tasks & notes (dropdown)
 [ ] Organize by Day
 [ ] Organize by Week
+
+
+
+
+<!--Add .stop to main branch for v-on:click-->
