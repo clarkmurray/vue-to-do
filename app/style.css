@@ -6,6 +6,10 @@ h1 {
 	text-align: center;
 }
 
+#deleteIcon {
+	float: right;
+}
+
 #deleteIcon:hover {
 	cursor: pointer;
 	color: red;

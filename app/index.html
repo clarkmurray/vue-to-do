@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Vue To-Do</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,10 @@
 		<button v-on:click="clearAll">Clear List</button>
 
 		<ul >
-			<li v-for="(task,index) in tasks" v-bind:style="{'background-color': task.backgroundColor}" v-on:click="toggleColor(task)"><span v-on:click.stop="removeItem(index)" id="deleteIcon">x </span>{{index + 1}}. {{ task.name | capitalize }}</li>
+			<li v-for="(task,index) in tasks" v-bind:style="{'background-color': task.backgroundColor}" v-on:click="toggleColor(task)">
+				<i v-on:click.stop="changeBullet(task)" v-bind:class="{'fa fa-circle-o' : !task.isChecked, 'fa fa-check-circle' : task.isChecked}" aria-hidden="true"></i>
+ 				{{ task.name | capitalize }}<span v-on:click.stop="removeItem(index)" id="deleteIcon">x</span>
+ 			</li>
 		</ul>
 
 

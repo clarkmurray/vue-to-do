@@ -31,6 +31,7 @@ var toDo = new Vue ({
 				colors: ["blue", "green", "yellow", "red"],
 				colorsTracker: 0,
 				backgroundColor: "blue",
+				isChecked: false,
 			});
 			this.newTask = "";
 			document.getElementById("taskInput").focus();
@@ -53,6 +54,10 @@ var toDo = new Vue ({
 		clearAll: function() {
 			this.tasks = [];
 			document.getElementById("taskInput").focus();
+		},
+
+		changeBullet: function(task) {
+			task.isChecked = !task.isChecked;
 		}
 
 

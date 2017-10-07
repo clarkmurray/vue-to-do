@@ -11,13 +11,10 @@
 [x] Dynamically generate objects
 [x] Toggle multiple colors (green, yellow, red)
 [x] Clear whole list
+[x] Mark tasks as complete, in progress, or not started
 [ ] Drag and drop for order
-[ ] Mark as complete, in progress, or not started
-[ ] Sub-tasks & notes (dropdown)
-[ ] Organize by Day
-[ ] Organize by Week
-
-
-
-
-<!--Add .stop to main branch for v-on:click-->
+[ ] Name your list
+[ ] Notes on task (dropdown)
+[ ] Sub-tasks within task (dropdown)
+[ ] Create multiple lists
+[ ] Auto sort
