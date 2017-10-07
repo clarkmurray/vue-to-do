@@ -1,3 +1,9 @@
+Vue.directive('focus', {
+	inserted: function (el) {
+		el.focus()
+	}
+});
+
 var toDo = new Vue ({
 
 	el: "#taskList",
@@ -27,6 +33,7 @@ var toDo = new Vue ({
 				backgroundColor: "blue",
 			});
 			this.newTask = "";
+			document.getElementById("taskInput").focus();
 
 		},
 
@@ -45,9 +52,10 @@ var toDo = new Vue ({
 
 		clearAll: function() {
 			this.tasks = [];
+			document.getElementById("taskInput").focus();
 		}
+
+
 	}
-
-
 
 })

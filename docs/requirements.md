@@ -7,7 +7,7 @@
 [x] Have clickable 'x' that deletes the item on the list
 [x] Press Enter to submit
 [x] Don't accept blank inputs
-[ ] Give input field focus after each submission
+[x] Give input field focus after each submission
 [x] Dynamically generate objects
 [x] Toggle multiple colors (green, yellow, red)
 [x] Clear whole list

@@ -10,7 +10,7 @@
 	<div id="taskList" v-cloak>
 
 
-		<input v-model="newTask" v-on:keyup.enter="addToList" id="taskInput" type="text" placeholder="Enter task here">
+		<input v-focus v-model="newTask" v-on:keyup.enter="addToList" id="taskInput" type="text" placeholder="Enter task here">
 		<button v-on:click="addToList">Add Task</button>
 		<button v-on:click="clearAll">Clear List</button>
 
