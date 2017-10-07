@@ -9,7 +9,8 @@
 [x] Don't accept blank inputs
 [ ] Give input field focus after each submission
 [x] Dynamically generate objects
-[ ] Toggle multiple colors (green, yellow, red)
+[x] Toggle multiple colors (green, yellow, red)
+[x] Clear whole list
 [ ] Drag and drop for order
 [ ] Mark as complete, in progress, or not started
 [ ] Sub-tasks & notes (dropdown)

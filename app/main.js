@@ -22,7 +22,9 @@ var toDo = new Vue ({
 			if (this.newTask == '') return false;
 			this.tasks.push({
 				name: this.newTask,
-				turnGreen: false
+				colors: ["blue", "green", "yellow", "red"],
+				colorsTracker: 0,
+				backgroundColor: "blue",
 			});
 			this.newTask = "";
 
@@ -33,7 +35,16 @@ var toDo = new Vue ({
 		},
 
 		toggleColor: function(task) {
-			task.turnGreen = !task.turnGreen;
+			if (task.colorsTracker == (task.colors.length - 1)) {
+				task.colorsTracker = 0;
+			} else {
+				task.colorsTracker += 1;
+			}
+			task.backgroundColor = task.colors[task.colorsTracker];
+		},
+
+		clearAll: function() {
+			this.tasks = [];
 		}
 	}
 

@@ -12,9 +12,10 @@
 
 		<input v-model="newTask" v-on:keyup.enter="addToList" id="taskInput" type="text" placeholder="Enter task here">
 		<button v-on:click="addToList">Add Task</button>
+		<button v-on:click="clearAll">Clear List</button>
 
 		<ul >
-			<li v-for="(task,index) in tasks" v-bind:class="{'isGreen': task.turnGreen}" v-on:click="toggleColor(task)"><span v-on:click.stop="removeItem(index)" id="deleteIcon">x </span>{{index + 1}}. {{ task.name | capitalize }}</li>
+			<li v-for="(task,index) in tasks" v-bind:style="{'background-color': task.backgroundColor}" v-on:click="toggleColor(task)"><span v-on:click.stop="removeItem(index)" id="deleteIcon">x </span>{{index + 1}}. {{ task.name | capitalize }}</li>
 		</ul>
 
 

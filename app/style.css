@@ -28,7 +28,3 @@ li:hover {
 [v-cloak] {
 	display: none;
 }
-
-.isGreen {
-	background-color: green;
-}
