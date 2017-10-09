@@ -4,6 +4,7 @@ Vue.directive('focus', {
 	}
 });
 
+
 var toDo = new Vue ({
 
 	el: "#taskList",
@@ -39,7 +40,7 @@ var toDo = new Vue ({
 		},
 
 		removeItem: function(index) {
-			this.tasks.splice(index, 1);
+			this.tasks.splice(index, 1); 
 		},
 
 		toggleColor: function(task) {
@@ -54,6 +55,7 @@ var toDo = new Vue ({
 		clearAll: function() {
 			this.tasks = [];
 			document.getElementById("taskInput").focus();
+			this.newTask = "";
 		},
 
 		changeBullet: function(task) {

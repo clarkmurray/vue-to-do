@@ -14,6 +14,7 @@
 [x] Mark tasks as complete, in progress, or not started
 [ ] Drag and drop for order
 [ ] Name your list
+[ ] Shortcut for Clear List button
 [ ] Notes on task (dropdown)
 [ ] Sub-tasks within task (dropdown)
 [ ] Create multiple lists

@@ -1,0 +1,25 @@
+{
+  "name": "vue-to-do",
+  "version": "1.0.0",
+  "description": "A to-do list app written in JavaScript with the Vue framework.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarkmurray/vue-to-do.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clarkmurray/vue-to-do/issues"
+  },
+  "homepage": "https://github.com/clarkmurray/vue-to-do#readme",
+  "dependencies": {
+    "vuedraggable": "^2.14.1"
+  }
+}
