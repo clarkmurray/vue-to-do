@@ -8,13 +8,12 @@
 <body>
 	<h1>Vue To-Do List</h1>
 
-	<div id="taskList" v-cloak>
+	<div id="taskList" v-cloak v-on:keyup.alt.delete="clearAll">
 
 
 		<input v-focus v-model="newTask" v-on:keyup.enter="addToList" id="taskInput" type="text" placeholder="Enter task here">
-		<button v-on:click="addToList">Add Task</button>
 
-		<ul >
+		<ul>
 			<li v-for="(task,index) in tasks" v-bind:style="{'background-color': task.backgroundColor}" v-on:click="toggleColor(task)">
 				<i v-on:click.stop="changeBullet(task)" v-bind:class="{'fa fa-circle-o' : !task.isChecked, 'fa fa-check-circle' : task.isChecked}" aria-hidden="true"></i>
  				{{ task.name | capitalize }}<span v-on:click.stop="removeItem(index)" id="deleteIcon">x</span>

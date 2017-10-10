@@ -23,6 +23,13 @@ var toDo = new Vue ({
     }
   },
 
+
+  	beforeMount: function() {
+  		this.loadTasks();
+  	},
+
+
+
 	methods: {
 
 		addToList: function() {
@@ -37,10 +44,23 @@ var toDo = new Vue ({
 			this.newTask = "";
 			document.getElementById("taskInput").focus();
 
+			this.saveTasks();
+
 		},
 
 		removeItem: function(index) {
 			this.tasks.splice(index, 1); 
+			this.saveTasks();
+		},
+
+
+		saveTasks: function() {
+			localStorage.setItem("tasks", JSON.stringify(this.tasks));
+		},
+
+
+		loadTasks: function() {
+			this.tasks = JSON.parse(localStorage.getItem('tasks'));
 		},
 
 		toggleColor: function(task) {
@@ -50,16 +70,21 @@ var toDo = new Vue ({
 				task.colorsTracker += 1;
 			}
 			task.backgroundColor = task.colors[task.colorsTracker];
+			this.saveTasks();
 		},
 
 		clearAll: function() {
+			console.log("Registered");
 			this.tasks = [];
+
 			document.getElementById("taskInput").focus();
 			this.newTask = "";
+			this.saveTasks();
 		},
 
 		changeBullet: function(task) {
 			task.isChecked = !task.isChecked;
+			this.saveTasks();
 		}
 
 
