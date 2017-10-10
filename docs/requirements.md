@@ -16,9 +16,15 @@
 [x] Mark tasks as complete, in progress, or not started
 [x] Local storage
 [x] Hotkey for Clear List
-[ ] Drag and drop for order
+[ ] Drag and drop for order (save when you change order)
 [ ] Name your list
 [ ] Edit list items
+
+
+## Little Things
+[ ] Drag & Drop Vue Warning
+[ ] Styling
+[ ] Style Vue Draggable transition
 
 
 

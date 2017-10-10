@@ -14,10 +14,10 @@
 		<input v-focus v-model="newTask" v-on:keyup.enter="addToList" id="taskInput" type="text" placeholder="Enter task here">
 
 		<ul>
-			<li v-for="(task,index) in tasks" v-bind:style="{'background-color': task.backgroundColor}" v-on:click="toggleColor(task)">
+			<draggable v-model="tasks" @start="drag=true" @end="drag=false"><li v-for="(task,index) in tasks" v-bind:style="{'background-color': task.backgroundColor}" v-on:click="toggleColor(task,index)">
 				<i v-on:click.stop="changeBullet(task)" v-bind:class="{'fa fa-circle-o' : !task.isChecked, 'fa fa-check-circle' : task.isChecked}" aria-hidden="true"></i>
  				{{ task.name | capitalize }}<span v-on:click.stop="removeItem(index)" id="deleteIcon">x</span>
- 			</li>
+ 			</li></draggable>
 		</ul>
 		<button v-on:click="clearAll">Clear List</button>
 
@@ -25,6 +25,6 @@
 	</div>
 
 	<script src="https://unpkg.com/vue"></script>
-	<script src="main.js"></script>
+ 	<script src="bundle.js"></script>
 </body>
 </html>

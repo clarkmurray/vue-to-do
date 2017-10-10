@@ -1,3 +1,6 @@
+var draggable = require('vuedraggable');
+
+
 Vue.directive('focus', {
 	inserted: function (el) {
 		el.focus()
@@ -26,6 +29,10 @@ var toDo = new Vue ({
 
   	beforeMount: function() {
   		this.loadTasks();
+  	},
+
+  	components: {
+  		draggable
   	},
 
 
@@ -74,7 +81,6 @@ var toDo = new Vue ({
 		},
 
 		clearAll: function() {
-			console.log("Registered");
 			this.tasks = [];
 
 			document.getElementById("taskInput").focus();
